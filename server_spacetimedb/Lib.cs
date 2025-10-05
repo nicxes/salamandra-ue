@@ -28,4 +28,22 @@ public static partial class Module
         }
         Log.Info("Hello, World!");
     }
+
+    [Reducer]
+    public static void Debug(ReducerContext ctx)
+    {
+        Log.Info($"This reducer was called by {ctx.Sender}");
+    }
+
+    [Reducer(ReducerKind.ClientConnected)]
+    public static void Connect(ReducerContext ctx)
+    {
+        Log.Info($"{ctx.Sender} just connected.");
+    }
+
+    [Reducer(ReducerKind.ClientDisconnected)]
+    public static void Disconnect(ReducerContext ctx)
+    {
+        Log.Info($"{ctx.Sender} just disconnected.");
+    }
 }
