@@ -54,3 +54,12 @@ Navigate to the project root directory and start the local SpacetimeDB server:
 cd salamandra-ue
 spacetime start
 ```
+
+### 3. Publish the module to the cloud (optional)
+
+To deploy your SpacetimeDB server module to Maincloud, run:
+
+```bash
+spacetime publish -s maincloud salamandra
+```
+
