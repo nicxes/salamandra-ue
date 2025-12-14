@@ -11,4 +11,18 @@
     <PackageReference Include="SpacetimeDB.Runtime" Version="1.5.*" />
   </ItemGroup>
 
+  <!-- START LOCAL SERVER -->
+  <Target Name="StartLocal">
+    <Exec Command="spacetime start" />
+  </Target>
+
+  <!-- PUBLISH LOCAL -->
+  <Target Name="PublishLocal" AfterTargets="Build">
+    <Exec Command="spacetime publish --server local salamandra" />
+  </Target>
+
+  <!-- PUBLISH CLOUD -->
+  <Target Name="PublishCloud" AfterTargets="Build">
+    <Exec Command="spacetime publish -s maincloud salamandra" />
+  </Target>
 </Project>

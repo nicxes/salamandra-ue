@@ -55,11 +55,17 @@ cd salamandra-ue
 spacetime start
 ```
 
-### 3. Publish the module to the cloud (optional)
+### 3. Publish the module to the cloud or local (optional)
 
 To deploy your SpacetimeDB server module to Maincloud, run:
 
 ```bash
 spacetime publish -s maincloud salamandra
+```
+
+To update/deploy your SpacetimeDB server locally, run:
+
+```bash
+spacetime publish
 ```
 
